@@ -5,7 +5,7 @@ A collection of JS utilities.
 ## Install
 
 ```sh
-npm install js-utils
+npm install @fabioquarantini/js-utils
 ```
 
 ## Usage
