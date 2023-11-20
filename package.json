@@ -1,0 +1,21 @@
+{
+  "name": "js-utils",
+  "version": "1.0.0",
+  "description": "A collection of JS utilities",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabioquarantini/js-utils.git"
+  },
+  "keywords": [
+    "utils",
+    "js-utils",
+    "utilities"
+  ],
+  "author": "Fabio Quarantini",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fabioquarantini/js-utils/issues"
+  },
+  "homepage": "https://github.com/fabioquarantini/js-utils#readme"
+}
