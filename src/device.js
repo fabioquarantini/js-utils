@@ -1,5 +1,5 @@
 /**
- * Match CSS media queries and JavaScript window width
+ * Match CSS media queries and JavaScript window width.
  *
  * @see http://stackoverflow.com/a/11310353
  * @returns {{width: number, height: number}} An object containing the width and height of the viewport.

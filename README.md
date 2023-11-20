@@ -50,10 +50,39 @@ Deletes a cookie given its name.
 
 ## Device
 
-- `getViewportSize()`: Returns the current viewport size as an object { width: number, height: number }.
-- `isTouchDevice()`: Returns a boolean indicating whether the current device is a touch device.
-- `getDeviceOrientation()`: Returns the current device orientation as a string ('portrait' or 'landscape').
-- `getMousePosition(event: Event)`: Returns the current mouse position as an object { x: number, y: number }.
+### `getViewportSize()`
+Match CSS media queries and JavaScript window width.
+
+#### Returns
+- {width: number, height: number}: An object containing the width and height of the viewport.
+
+---
+
+### `isTouchDevice()`
+Checks if the current device is a touch-enabled device.
+
+#### Returns
+- {boolean}: True if the device supports touch, false otherwise.
+
+---
+
+### `getDeviceOrientation()`
+Determines the orientation of the device.
+
+#### Returns
+- {string}: 'portrait' if the device is in portrait mode, 'landscape' otherwise.
+
+---
+
+### `getMousePosition(event)`
+Calculates the mouse position relative to the document.
+
+#### Parameters
+- `event` (Event): The mouse event from which to extract the position.
+
+#### Returns
+- {x: number, y: number}: An object containing the x and y coordinates of the mouse.
+
 
 ## Language
 
