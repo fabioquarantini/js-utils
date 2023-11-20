@@ -20,9 +20,33 @@ setCookie("examplename", "123")
 
 ## Cookies
 
-- `setCookie(name: string, value: string, days: number)`: Sets a cookie with the given name and value, which expires after the specified number of days.
-- `getCookie(name: string)`: Returns the value of the cookie with the given name, or null if the cookie does not exist.
-- `deleteCookie(name: string)`: Deletes the cookie with the given name.
+### `setCookie(name, value, days)`
+Sets a cookie with a name, value, and number of days until it expires.
+
+#### Parameters
+- `name` (string): The name of the cookie.
+- `value` (string): The value of the cookie.
+- `days` (number): The number of days until the cookie expires.
+
+---
+
+### `getCookie(name)`
+Retrieves the value of a cookie given its name.
+
+#### Parameters
+- `name` (string): The name of the cookie.
+
+#### Returns
+- (string|null): The value of the cookie if it exists, otherwise null.
+
+---
+
+### `deleteCookie(name)`
+Deletes a cookie given its name.
+
+#### Parameters
+- `name` (string): The name of the cookie.
+
 
 ## Device
 
