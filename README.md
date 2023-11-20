@@ -18,6 +18,18 @@ setCookie("examplename", "123")
 
 # API
 
+### Table of Contents
+
+- [Cookies](#cookies)
+- [Device](#device)
+- [Language](#language)
+- [Math](#math)
+- [Selectors](#selectors)
+- [Performance](#performance)
+- [Events](#events)
+- [Validations](#validations)
+- [Paths](#paths)
+
 ## Cookies
 
 #### `setCookie(name, value, days)`
