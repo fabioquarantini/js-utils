@@ -86,41 +86,223 @@ Calculates the mouse position relative to the document.
 
 ## Language
 
-- `getUserLanguage()`: Returns the user's preferred language as a string (e.g., "en-US").
-- `getSiteLanguage()`: Returns the current site's language as a string (e.g., "en").
+### `getUserLanguage()`
+Retrieves the user's preferred language setting from the browser.
+
+#### Returns
+- (string): The user's preferred language as a string (e.g., "en-US").
+
+---
+
+### `getSiteLanguage()`
+Gets the language attribute of the current document.
+
+#### Returns
+- (string): The language of the current document as defined in its <html> tag (e.g., "en").
 
 ## Math
 
-- `getRandomNumber(min: number, max: number, decimal?: number)`: Returns a random number between min and max, optionally formatted to the specified decimal precision.
-- `getRandomInt(min: number, max: number)`: Returns a random integer between min and max.
-- `normalize(value: number, sourceMin: number, sourceMax: number, targetMin: number, targetMax: number)`: Normalizes a number from one range to another.
-- `lerp(start: number, end: number, amount: number)`: Performs linear interpolation between two values based on an amount.
+### `getRandomNumber(min, max, [decimal])`
+Generates a random number within a specified range, optionally formatted to the specified decimal precision.
+
+#### Parameters
+- `min` (number): The minimum value of the range.
+- `max` (number): The maximum value of the range.
+- `decimal` (number, optional): The number of decimal places to include in the result.
+
+#### Returns
+- (number): A random number within the specified range, optionally formatted to the specified decimal precision.
+
+---
+
+### `getRandomInt(min, max)`
+Generates a random integer within a specified range.
+
+#### Parameters
+- `min` (number): The minimum value of the range.
+- `max` (number): The maximum value of the range.
+
+#### Returns
+- (number): A random integer within the specified range.
+
+---
+
+### `normalize(value, sourceMin, sourceMax, targetMin, targetMax)`
+Normalizes a given value from one range to another.
+
+#### Parameters
+- `value` (number): The value to normalize.
+- `sourceMin` (number): The minimum value of the source range.
+- `sourceMax` (number): The maximum value of the source range.
+- `targetMin` (number): The minimum value of the target range.
+- `targetMax` (number): The maximum value of the target range.
+
+#### Returns
+- (number): The value normalized to the target range.
+
+---
+
+### `lerp(start, end, amount)`
+Performs linear interpolation between two values based on an amount.
+
+#### Parameters
+- `start` (number): The start value.
+- `end` (number): The end value.
+- `amount` (number): The interpolation amount between the start and end values.
+
+#### Returns
+- (number): The interpolated value.
 
 ## Selectors
 
-- `elementExist(selector: string)`: Checks if an element with the specified selector exists in the DOM.
-- `onElementChange(selector: string, onAdded: function, onRemoved: function, observeConfig: Object)`: Observes DOM for specified selector's element additions or removals, triggering callbacks.
+### `elementExist(selector)`
+Checks if an element with the specified selector exists in the DOM.
+
+#### Parameters
+- `selector` (string): The CSS selector of the element to check.
+
+#### Returns
+- (boolean): True if the element exists, false otherwise.
+
+---
+
+### `onElementChange(selector, onAdded, onRemoved, observeConfig = {})`
+Observes DOM for specified selector's element additions or removals, triggering callbacks.
+
+#### Parameters
+- `selector` (string): CSS selector for matching elements.
+- `onAdded` (function): Callback for element additions matching the selector.
+- `onRemoved` (function): Callback for element removals matching the selector.
+- `observeConfig` (Object): Optional config for the observer (childList, subtree, attributes, characterData).
+
+#### Returns
+- (function): Function to disconnect the observer.
 
 ## Performance
 
-- `throttle(func: function, limit: number)`: Throttles a function call, ensuring that it is only invoked at most once every specified limit in milliseconds.
-- `debounce(func: function, wait: number, immediate: boolean)`: Returns a function, that, as long as it continues to be invoked, will not be triggered.
+### `throttle(func, limit)`
+Throttles a function call, ensuring that it is only invoked at most once every specified limit in milliseconds.
+
+#### Parameters
+- `func` (Function): The function to be throttled.
+- `limit` (number): The time limit in milliseconds to throttle the function calls.
+
+#### Returns
+- (Function): A throttled version of the input function.
+
+---
+
+### `debounce(func, wait, immediate)`
+Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for N milliseconds. If 'immediate' is passed, trigger the function on the leading edge, instead of the trailing.
+
+#### Parameters
+- `func` (Function): The function to debounce.
+- `wait` (number): The number of milliseconds to delay.
+- `immediate` (boolean, optional): Specify invoking on the leading edge of the timeout.
+
+#### Returns
+- (Function): Returns the new debounced function.
 
 ## Events
 
-- `dispatchCustomEvent(eventName: string, detail: any, debug: boolean)`: Dispatches a custom event.
+### `dispatchCustomEvent(eventName, detail, debug = false)`
+Dispatches a custom event.
+
+#### Parameters
+- `eventName` (string): The name of the custom event to dispatch.
+- `detail` (*): The data to pass with the event.
+- `debug` (boolean, optional, default: false): Enables logging for debugging purposes.
+
+#### Throws
+- Will throw an error if the event name is not a string or is empty.
 
 ## Validations
 
-- `isEmail(value: string)`: Checks if a given value is a valid email address.
-- `isUrl(value: string)`: Checks if a given value is a valid URL.
-- `isInteger(value: string)`: Checks if a given value is an integer.
-- `isNumeric(value: string)`: Checks if a given value is numeric.
-- `isFloat(value: string)`: Checks if a given value is a floating-point number.
-- `isEmpty(value: string, ignoreWhiteSpace: boolean)`: Checks if a given value is empty. Can optionally ignore white space.
+### `isEmail(value)`
+Checks if a given value is a valid email address.
+
+#### Parameters
+- `value` (string): The value to be checked.
+
+#### Returns
+- (boolean): True if the value is a valid email address, false otherwise.
+
+---
+
+### `isUrl(value)`
+Checks if a given value is a valid URL.
+
+#### Parameters
+- `value` (string): The value to be checked.
+
+#### Returns
+- (boolean): True if the value is a valid URL, false otherwise.
+
+---
+
+### `isInteger(value)`
+Checks if a given value is an integer.
+
+#### Parameters
+- `value` (string): The value to be checked.
+
+#### Returns
+- (boolean): True if the value is an integer, false otherwise.
+
+---
+
+### `isNumeric(value)`
+Checks if a given value is numeric.
+
+#### Parameters
+- `value` (string): The value to be checked.
+
+#### Returns
+- (boolean): True if the value is numeric, false otherwise.
+
+---
+
+### `isFloat(value)`
+Checks if a given value is a floating-point number.
+
+#### Parameters
+- `value` (string): The value to be checked.
+
+#### Returns
+- (boolean): True if the value is a float, false otherwise.
+
+---
+
+### `isEmpty(value, ignoreWhiteSpace)`
+Checks if a given value is empty. Can optionally ignore white space.
+
+#### Parameters
+- `value` (string): The value to be checked.
+- `ignoreWhiteSpace` (boolean): If true, white space is ignored.
+
+#### Returns
+- (boolean): True if the value is empty, false otherwise.
 
 ## Paths
 
-- `getUrl()`: Get the base URL of the current page. Combines protocol, host, and port information.
-- `getFullUrl()`: Get the full URL of the current page. Includes protocol, host, path, and query string.
-- `getTemplateUrl()`: Get template URL from the data attributes 'data-template-url' of the body tag.
+### `getUrl()`
+Get the base URL of the current page. Combines protocol, host, and port information.
+
+#### Returns
+- (string): The site URL.
+
+---
+
+### `getFullUrl()`
+Get the full URL of the current page. Includes protocol, host, path, and query string.
+
+#### Returns
+- (string): The current page URL.
+
+---
+
+### `getTemplateUrl()`
+Get template URL from the data attributes 'data-template-url' of the body tag.
+
+#### Returns
+- (string|null): The template URL if set, or null if not found.
