@@ -20,7 +20,7 @@ setCookie("examplename", "123")
 
 ## Cookies
 
-### `setCookie(name, value, days)`
+#### `setCookie(name, value, days)`
 Sets a cookie with a name, value, and number of days until it expires.
 
 #### Parameters
@@ -30,7 +30,7 @@ Sets a cookie with a name, value, and number of days until it expires.
 
 ---
 
-### `getCookie(name)`
+#### `getCookie(name)`
 Retrieves the value of a cookie given its name.
 
 #### Parameters
@@ -41,7 +41,7 @@ Retrieves the value of a cookie given its name.
 
 ---
 
-### `deleteCookie(name)`
+#### `deleteCookie(name)`
 Deletes a cookie given its name.
 
 #### Parameters
@@ -50,7 +50,7 @@ Deletes a cookie given its name.
 
 ## Device
 
-### `getViewportSize()`
+#### `getViewportSize()`
 Match CSS media queries and JavaScript window width.
 
 #### Returns
@@ -58,7 +58,7 @@ Match CSS media queries and JavaScript window width.
 
 ---
 
-### `isTouchDevice()`
+#### `isTouchDevice()`
 Checks if the current device is a touch-enabled device.
 
 #### Returns
@@ -66,7 +66,7 @@ Checks if the current device is a touch-enabled device.
 
 ---
 
-### `getDeviceOrientation()`
+#### `getDeviceOrientation()`
 Determines the orientation of the device.
 
 #### Returns
@@ -74,7 +74,7 @@ Determines the orientation of the device.
 
 ---
 
-### `getMousePosition(event)`
+#### `getMousePosition(event)`
 Calculates the mouse position relative to the document.
 
 #### Parameters
@@ -86,7 +86,7 @@ Calculates the mouse position relative to the document.
 
 ## Language
 
-### `getUserLanguage()`
+#### `getUserLanguage()`
 Retrieves the user's preferred language setting from the browser.
 
 #### Returns
@@ -94,7 +94,7 @@ Retrieves the user's preferred language setting from the browser.
 
 ---
 
-### `getSiteLanguage()`
+#### `getSiteLanguage()`
 Gets the language attribute of the current document.
 
 #### Returns
@@ -102,7 +102,7 @@ Gets the language attribute of the current document.
 
 ## Math
 
-### `getRandomNumber(min, max, [decimal])`
+#### `getRandomNumber(min, max, [decimal])`
 Generates a random number within a specified range, optionally formatted to the specified decimal precision.
 
 #### Parameters
@@ -115,7 +115,7 @@ Generates a random number within a specified range, optionally formatted to the 
 
 ---
 
-### `getRandomInt(min, max)`
+#### `getRandomInt(min, max)`
 Generates a random integer within a specified range.
 
 #### Parameters
@@ -127,7 +127,7 @@ Generates a random integer within a specified range.
 
 ---
 
-### `normalize(value, sourceMin, sourceMax, targetMin, targetMax)`
+#### `normalize(value, sourceMin, sourceMax, targetMin, targetMax)`
 Normalizes a given value from one range to another.
 
 #### Parameters
@@ -142,7 +142,7 @@ Normalizes a given value from one range to another.
 
 ---
 
-### `lerp(start, end, amount)`
+#### `lerp(start, end, amount)`
 Performs linear interpolation between two values based on an amount.
 
 #### Parameters
@@ -155,7 +155,7 @@ Performs linear interpolation between two values based on an amount.
 
 ## Selectors
 
-### `elementExist(selector)`
+#### `elementExist(selector)`
 Checks if an element with the specified selector exists in the DOM.
 
 #### Parameters
@@ -166,7 +166,7 @@ Checks if an element with the specified selector exists in the DOM.
 
 ---
 
-### `onElementChange(selector, onAdded, onRemoved, observeConfig = {})`
+#### `onElementChange(selector, onAdded, onRemoved, observeConfig = {})`
 Observes DOM for specified selector's element additions or removals, triggering callbacks.
 
 #### Parameters
@@ -180,7 +180,7 @@ Observes DOM for specified selector's element additions or removals, triggering 
 
 ## Performance
 
-### `throttle(func, limit)`
+#### `throttle(func, limit)`
 Throttles a function call, ensuring that it is only invoked at most once every specified limit in milliseconds.
 
 #### Parameters
@@ -192,7 +192,7 @@ Throttles a function call, ensuring that it is only invoked at most once every s
 
 ---
 
-### `debounce(func, wait, immediate)`
+#### `debounce(func, wait, immediate)`
 Returns a function, that, as long as it continues to be invoked, will not be triggered. The function will be called after it stops being called for N milliseconds. If 'immediate' is passed, trigger the function on the leading edge, instead of the trailing.
 
 #### Parameters
@@ -205,7 +205,7 @@ Returns a function, that, as long as it continues to be invoked, will not be tri
 
 ## Events
 
-### `dispatchCustomEvent(eventName, detail, debug = false)`
+#### `dispatchCustomEvent(eventName, detail, debug = false)`
 Dispatches a custom event.
 
 #### Parameters
@@ -218,7 +218,7 @@ Dispatches a custom event.
 
 ## Validations
 
-### `isEmail(value)`
+#### `isEmail(value)`
 Checks if a given value is a valid email address.
 
 #### Parameters
@@ -229,7 +229,7 @@ Checks if a given value is a valid email address.
 
 ---
 
-### `isUrl(value)`
+#### `isUrl(value)`
 Checks if a given value is a valid URL.
 
 #### Parameters
@@ -240,7 +240,7 @@ Checks if a given value is a valid URL.
 
 ---
 
-### `isInteger(value)`
+#### `isInteger(value)`
 Checks if a given value is an integer.
 
 #### Parameters
@@ -251,7 +251,7 @@ Checks if a given value is an integer.
 
 ---
 
-### `isNumeric(value)`
+#### `isNumeric(value)`
 Checks if a given value is numeric.
 
 #### Parameters
@@ -262,7 +262,7 @@ Checks if a given value is numeric.
 
 ---
 
-### `isFloat(value)`
+#### `isFloat(value)`
 Checks if a given value is a floating-point number.
 
 #### Parameters
@@ -273,7 +273,7 @@ Checks if a given value is a floating-point number.
 
 ---
 
-### `isEmpty(value, ignoreWhiteSpace)`
+#### `isEmpty(value, ignoreWhiteSpace)`
 Checks if a given value is empty. Can optionally ignore white space.
 
 #### Parameters
@@ -285,7 +285,7 @@ Checks if a given value is empty. Can optionally ignore white space.
 
 ## Paths
 
-### `getUrl()`
+#### `getUrl()`
 Get the base URL of the current page. Combines protocol, host, and port information.
 
 #### Returns
@@ -293,7 +293,7 @@ Get the base URL of the current page. Combines protocol, host, and port informat
 
 ---
 
-### `getFullUrl()`
+#### `getFullUrl()`
 Get the full URL of the current page. Includes protocol, host, path, and query string.
 
 #### Returns
@@ -301,7 +301,7 @@ Get the full URL of the current page. Includes protocol, host, path, and query s
 
 ---
 
-### `getTemplateUrl()`
+#### `getTemplateUrl()`
 Get template URL from the data attributes 'data-template-url' of the body tag.
 
 #### Returns
